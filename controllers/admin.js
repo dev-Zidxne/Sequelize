@@ -76,8 +76,7 @@ exports.postEditProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
-  console
-    .log(req.user.cart)
+  req.user
     .getProducts()
     .then((products) => {
       res.render("admin/products", {
